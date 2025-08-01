@@ -1,0 +1,28 @@
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+
+local function notify(title, text, duration)
+    StarterGui:SetCore("SendNotification", {
+        Title = title,
+        Text = text,
+        Duration = duration
+    })
+end
+
+if game.PlaceId == 3623096087 then
+    local success, err = pcall(function()
+        if not _G.AXHUBLOADED then
+            _G.AXHUBLOADED = true
+            notify("CRACKED BY ZTX TEAM", "ENJOY", 3)
+            local source = game:HttpGet("https://pastebin.com/raw/EhNzAZ2R")
+            loadstring(source)():Load("AX HUB Cracked By ZTX Team", "Default"):newTab("🏠 Main", "ImageIdHere")
+            notify("¡AX HUB Loaded BY ZTX TEAM!", "For more information, go to extras section!", 15)
+        end
+    end)
+
+    if not success then
+        warn("Erro ao carregar AX HUB BY ZTX TEAM:", err)
+    end
+else
+    notify("Invalid Game!", "AX HUB CRACKED BY ZTX TEAM only works on '💪Muscle Legends'.", 15)
+end
